@@ -22,6 +22,7 @@
     "build:esm": "tsc -p tsconfig.json --outDir dist/esm --module esnext",
     "build:cjs": "tsc -p tsconfig.json --outDir dist/cjs --module commonjs",
     "build": "npm-run-all build:*",
+    "prepare": "npm run build",
     "prettier": "prettier --list-different \"{src,types,options,test}/**/*.{ts,tsx}\"",
     "prettier:fix": "prettier --write \"{src,types,options,test}/**/*.{ts,tsx}\"",
     "jest": "jest",
