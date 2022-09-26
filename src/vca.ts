@@ -1,10 +1,10 @@
-import Vue, { VNode, ComponentOptions } from "vue";
-import {
+import Vue, { 
+  VNode, 
+  ComponentOptions, 
   defineComponent,
   SetupContext as SetupContext_,
-  ComponentRenderProxy,
-  ShallowUnwrapRef
-} from "@vue/composition-api";
+  ComponentPublicInstance as ComponentRenderProxy,
+  ShallowUnwrapRef } from "vue";
 import { _TsxComponentV3, RequiredPropNames, PropsForOutside } from "./api";
 import { RecordPropsDefinition } from "vue/types/options";
 import { InnerScopedSlots, TsxComponentTypeInfo, EventHandler } from "../types/base";
