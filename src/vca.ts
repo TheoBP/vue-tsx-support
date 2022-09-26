@@ -1,6 +1,7 @@
 import Vue, { 
   VNode, 
   ComponentOptions, 
+  ComponentInstance,
   defineComponent,
   SetupContext as SetupContext_,
   ComponentPublicInstance as ComponentRenderProxy,
@@ -15,6 +16,11 @@ export type SetupContext<
   On = unknown
 > = SetupContext_ & {
   slots: InnerScopedSlots<ScopedSlots>;
+
+  readonly refs: { [key: string]: Vue | Element | Vue[] | Element[] }  
+  readonly parent: ComponentInstance | null
+  readonly root: ComponentInstance
+
   _tsx?: TsxComponentTypeInfo<{}, {}, PrefixedEvents, On>;
 };
 
