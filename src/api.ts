@@ -179,7 +179,10 @@ export interface ComponentFactory<
       Data,
       Methods,
       Computed,
-      Props
+      Props,
+      any, //SetupBindings
+      any, //Mixin
+      any //Extends
     > & {
       props?: PropsDef;
     },
@@ -194,7 +197,7 @@ export interface ComponentFactory<
   >;
 
   mixin<Data, Methods, Computed, Props>(
-    mixinObject: ThisTypedComponentOptions<Vue, Data, Methods, Computed, Props>
+    mixinObject: ThisTypedComponentOptions<Vue, Data, Methods, Computed, Props, any, any, any>
   ): ComponentFactory<
     BaseProps & Props,
     PrefixedEvents,
